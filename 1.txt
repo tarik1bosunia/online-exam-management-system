@@ -1,0 +1,25 @@
+docker-compose up --build
+http://localhost:8000/docs
+docker-compose restart backend
+
+{
+  "email": "tarik.cse.ru@gmail.com",
+  "password": "cseX1234@tata",
+  "full_name": "tarik bosunia",
+  "role": "admin"
+}
+
+docker volume ls
+docker volume rm online-exam-management-system_postgres_data
+
+uv venv
+source .venv/bin/activate
+uv pip install .
+uv pip install -e .
+cd backend
+uv add pytest httpx
+uv add alembic
+docker compose exec backend alembic init alembic
+sudo chown -R $USER:$USER backend/alembic backend/alembic.ini
+docker compose exec backend alembic revision --autogenerate -m "add is_graded to answer"
+docker compose exec backend alembic upgrade head

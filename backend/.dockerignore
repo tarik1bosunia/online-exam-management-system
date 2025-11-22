@@ -1,0 +1,19 @@
+# Git
+.git
+.gitignore
+
+# Python / UV
+__pycache__
+*.pyc
+.venv
+venv
+.pytest_cache
+htmlcov
+
+# Env vars (Security)
+.env
+.env.local
+
+# Editor
+.vscode
+.idea

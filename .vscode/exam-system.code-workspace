@@ -1,0 +1,27 @@
+// exam-system.code-workspace
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "Backend (FastAPI)",
+      "path": "backend"
+    },
+    {
+      "name": "Frontend (Next.js)",
+      "path": "frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/__pycache__": true,
+      "**/*.pyc": true
+    },
+    // formatting preference
+    "editor.formatOnSave": true
+  }
+}

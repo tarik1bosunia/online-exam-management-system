@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Backend (FastAPI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--reload",
+        "--port",
+        "8000"
+      ],
+      "jinja": true,
+      "cwd": "${workspaceFolder:Backend (FastAPI)}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder:Backend (FastAPI)}"
+      }
+    },
+    {
+      "name": "Debug Frontend (Next.js)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder:Frontend (Next.js)}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "FULL STACK: Debug All",
+      "configurations": ["Debug Backend (FastAPI)", "Debug Frontend (Next.js)"]
+    }
+  ]
+}

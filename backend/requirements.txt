@@ -1,0 +1,7 @@
+fastapi[standard]
+gunicorn
+sqlmodel
+SQLAlchemy
+requests
+python-decouple
+psycopg[binary]
